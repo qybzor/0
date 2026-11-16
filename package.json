@@ -1,0 +1,12 @@
+{
+  "name": "qybzor-saas",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Qybzor multi-tenant SaaS billing foundation",
+  "scripts": {
+    "dev": "npx http-server . -p 4173 -c-1",
+    "supabase:login": "supabase login",
+    "supabase:link": "supabase link",
+    "supabase:deploy": "supabase functions deploy create-subscription && supabase functions deploy mercadopago-webhook --no-verify-jwt && supabase functions deploy whatsapp-webhook --no-verify-jwt && supabase functions deploy connect-whatsapp-embedded"
+  }
+}
